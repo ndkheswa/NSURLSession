@@ -26,10 +26,10 @@ class ViewController: UIViewController {
                     do {
                         
                         let parsedData = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! NSArray
-                        let currentConditions = parsedData[index] as! NSDictionary
+                        let myData = parsedData[index] as! NSDictionary
                         
-                        let address = currentConditions["address"]
-                        print(currentConditions)
+                        let address = myData["address"]
+                        print(myData)
                         print(address)
                         
                         print(parsedData.count)
